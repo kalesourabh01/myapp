@@ -9,7 +9,7 @@ class BasicForms extends React.Component {
     this.state ={}
   }
   render() {
-    return <Container> <Form>
+    return <Container className="col-lg-6"> <Form>
     <Form.Group controlId="formBasicEmail">
       <Form.Label>Email address</Form.Label>
       <Form.Control type="email" placeholder="Enter email" />
