@@ -2,17 +2,39 @@ import React from 'react';
 import { Button} from 'react-bootstrap';
 import { Form} from 'react-bootstrap';
 import { Container} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Redirect } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  withRouter 
+} from "react-router-dom";
+
+
 
 class BasicForms extends React.Component {
+  
   constructor(){
     super();
-    this.state ={}
+    this.state ={
+      fireRedirect: false
+    }
   }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.history.push('/dashboard');
+  };
+
+
   render() {
-    return <Container className="col-lg-6"> <Form>
+    const { fireRedirect } = this.state;
+    return <Container className="col-lg-6"> <Form  onSubmit={this.handleSubmit}> 
     <Form.Group controlId="formBasicEmail">
       <Form.Label>Email address</Form.Label>
-      <Form.Control type="email" placeholder="Enter email" />
+      <Form.Control type="email" placeholder="Enter email" required />
       <Form.Text className="text-muted">
         We'll never share your email with anyone else.
       </Form.Text>
@@ -26,10 +48,11 @@ class BasicForms extends React.Component {
       <Form.Check type="checkbox" label="Check me out" />
     </Form.Group>
     <Button variant="primary" type="submit">
-      Submit
+      Log in
     </Button>
-  </Form> </Container>;
+  </Form>
+  </Container>;
   }
 }
 
-export default BasicForms;
+export default  withRouter(BasicForms);;
