@@ -3,6 +3,7 @@ import { Button, Row, Col, Container } from 'react-bootstrap';
 import Profile from "./Profile";
 import Menu from "../Menu";
 import Stocks from "./Stocks";
+import Corona from "./Corona"
 class Dashbord extends React.Component {
   constructor(){
     super();
@@ -23,7 +24,8 @@ class Dashbord extends React.Component {
     </Row>
     <Row>
     <Col sm={4}> <Profile/></Col>
-    <Col sm={8}><Stocks/></Col>
+    <Col sm={8}><Corona/></Col>
+    <Stocks/>
   </Row>
    
   </Container>
