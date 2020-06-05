@@ -6,8 +6,8 @@ class Stocks extends Component {
         return (
         <div>
              <Chart
-                width={400}
-                height={300}
+                width={'100%'}
+                height={'100%'}
                 chartType="LineChart"
                 loader={<div>Loading Chart</div>}
                 data={[
