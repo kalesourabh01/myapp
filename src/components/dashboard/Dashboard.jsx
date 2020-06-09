@@ -4,6 +4,7 @@ import Profile from "./Profile";
 import Menu from "../Menu";
 import Stocks from "./Stocks";
 import Corona from "./Corona"
+import Table from "./Table";
 class Dashbord extends React.Component {
   constructor(){
     super();
@@ -25,7 +26,7 @@ class Dashbord extends React.Component {
     <Row>
     <Col sm={4}> <Profile/></Col>
     <Col sm={8}><Corona/></Col>
-    <Stocks/>
+    <Table/>
   </Row>
    
   </Container>
