@@ -15,11 +15,10 @@ class Dashbord extends React.Component {
       </Col>
     </Row>
     <Row>
-    <Col sm={4}> <Profile/></Col>
+    <Col sm={4}> <Profile name="sourabh kale"/></Col>
     <Col sm={8}><Corona/></Col>
     <Table/>
   </Row>
-   
   </Container>
 
 
